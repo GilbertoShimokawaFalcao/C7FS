@@ -1,0 +1,110 @@
+** MINHAS CONFIGURAÇÕES **
+
+CRONOS = [cronoslog]
+
+CUSTOM [cronoslog] = D:\Backup\C7FSHUBDownloads\_!CronosLog
+CUSTOM [util] = D:\Backup\C7FSHUBDownloads\UtilVerificar
+CUSTOM [lixo] = D:\Backup\C7FSHUBDownloads\Lixo
+CUSTOM [ftp] = ftp://192.168.0.12:3456
+CUSTOM [transfertopc] = ftp://192.168.0.12:3456/!TransferToPC/
+CUSTOM [Whatssap] = ftp://192.168.0.12:3456/Android/media/com.whatsapp/WhatsApp
+
+CONNECT ftp://192.168.0.12:3456 = meuLogin,minhaSenha
+
+CREATE
+[util]\LocalPC
+[util]\PictureDCIM_etc
+[util]\TransferPC
+[util]\AndroidDownloads
+[util]\zap\imagens
+[util]\zap\Videos
+[util]\zap\Comuns
+[util]\zap\Documentos
+[util]\zap\ProfileFotos
+[util]\zap\Walpappers
+
+CUT
+C:\Users\UserDesktop\Videos\Captures\
+C:\Users\UserDesktop\Pictures\Screenshots\
+C:\Users\UserDesktop\Downloads\
+
+FOR
+[util]\LocalPC
+
+CUT
+[ftp]/Download/
+
+FOR
+[util]\AndroidDownloads
+
+CUT
+[transfertopc]
+
+FOR
+[util]\TransferPC
+
+CUT
+[ftp]/CubeCallRecorder/All/.props/
+[ftp]/DCIM/.globalTrash/
+[ftp]/DCIM/Camera/
+[ftp]/DCIM/Screenshots/
+[ftp]/Pictures/.thumbnails/
+[ftp]/Pictures/Memedroid Images/
+[ftp]/Pictures/Memes/
+[ftp]/Pictures/Messenger/
+[ftp]/Pictures/sticker.ly/
+[ftp]/Pictures/Whatsapp/
+[ftp]/SquarePic/.crop/
+
+FOR
+[util]\PictureDCIM_etc
+
+CUT
+[Whatssap]/Media/WhatsApp Documents/
+
+FOR
+[util]\zap\Documentos
+
+CUT
+[Whatssap]/Media/WhatsApp Images/
+
+FOR 
+[util]\zap\imagens
+
+CUT
+[Whatssap]/Media/WhatsApp Video/
+
+FOR
+[util]\zap\Videos
+
+CUT
+[Whatssap]/Media/WhatsApp Animated Gifs/
+[Whatssap]/Media/.Statuses/
+
+FOR
+[util]\zap\Comuns
+
+CUT
+[Whatssap]/Media/WhatsApp Profile Photos/
+
+FOR
+[util]\zap\ProfileFotos
+
+COPY
+[Whatssap]/Media/WallPaper/
+
+FOR
+[util]\zap\Walpappers
+
+CLEAR
+C:\Users\UserDesktop\AppData\Local\Temp\
+C:\Users\UserDesktop\Searches\
+[Whatssap]/Media/.Links/
+[Whatssap]/Media/WhatsApp Voice Notes/
+[Whatssap]/Media/WhatsApp Audio/
+[Whatssap]/.Shared/
+[Whatssap]/.StickerThumbs/
+[Whatssap]/.Thumbs/
+[Whatssap]/.trash/
+[Whatssap]/Backups/
+[Whatssap]/Databases/
